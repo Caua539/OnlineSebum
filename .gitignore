@@ -1,0 +1,4 @@
+target/tomcat/conf/logging.properties
+target/tomcat/logs/access_log.2017-05-19
+target/tomcat/conf/tomcat-users.xml
+target/tomcat/conf/web.xml
