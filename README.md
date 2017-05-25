@@ -1,5 +1,3 @@
-# OnlineSebum
+# <a href="http://onlinesebum.tk:8080">OnlineSebum</a>
 
 Rede social para troca de livros.
-
-http://192.241.132.49:9090/online-sebum/
