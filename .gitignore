@@ -9,3 +9,4 @@ target/tomcat/logs/access_log.2017-05-28
 target/tomcat/logs/access_log.2017-05-29
 target/tomcat/logs/access_log.2017-05-30
 src/main/webapp/debug.log
+target/tomcat/logs/access_log.2017-06-01
