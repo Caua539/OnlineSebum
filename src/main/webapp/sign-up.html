@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscreva-se no Online Sebum</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDIS5uGBh4NKUklYxFo_cJCUnPIuyU3tOo",
+    authDomain: "online-sebum.firebaseapp.com",
+    databaseURL: "https://online-sebum.firebaseio.com",
+    projectId: "online-sebum",
+    storageBucket: "online-sebum.appspot.com",
+    messagingSenderId: "748339253230"
+  };
+  firebase.initializeApp(config);
+    </script>
+    <script src="js/signup.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
+  <body>
+    <div class="col-md-12">
+        <div class="modal-dialog" style="margin-bottom:0">
+            <div class="modal-content">
+                <div class="panel-heading">
+                <h3>Participe hoje do Online Sebum.</h3>
+                </div>
+                <div class="panel-body">
+                <form name="formulario">
+                    <fieldset>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Nome" name="name" type="text" autofocus="">
+                            <br>
+                            <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus="">
+                            <br>
+                            <input class="form-control" placeholder="Senha" name="password" type="password" autofocus="">
+                            <br>
+                            <input class="form-control" placeholder="Confirme sua senha" name="password2" type="password" autofocus="">
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        Concordo com os <a href="https://drive.google.com/file/d/0B77cavaZSvLYTTB5OFNyNkd6djg/view?usp=sharing">termos</a> de uso do Online Sebum.
+                        </label>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                        <button class="btn btn-primary" type="button" onclick="signup()">Inscrever-se</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
