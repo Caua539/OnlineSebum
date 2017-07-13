@@ -7,7 +7,7 @@ function login() {
   auth.signInWithEmailAndPassword(email, password)
   firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    window.location.replace("http://localhost:8080/dashboard.html");    
+    window.location.replace("http://onlinesebum.tk:8080/dashboard.html");    
   } else {
     alert("Usuário inválido!");
   }
@@ -24,7 +24,7 @@ function signup() {
   firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     user.sendEmailVerification()
-    window.location.replace("http://localhost:8080/login.html");    
+    window.location.replace("http://onlinesebum.tk:8080/login.html");    
 
   }
 });
@@ -48,5 +48,5 @@ alert("E-mail: " + email + "\nNome: " + name);
 function sair(){
       alert("Saiu"); 
     firebase.auth().signOut();
-    window.location.replace("http://localhost:8080/login.html");   
+    window.location.replace("http://onlinesebum.tk:8080/login.html");   
 };
