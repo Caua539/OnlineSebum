@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Início</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+  </head>
+<body>
+<nav class="navbar navbar-inverse bg-primary">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Online Sebum</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="dashboard.html">Início</a></li>
+          <li><a href="new-book.html">Cadastrar Livro</a></li>
+          <li><a href="my-books.html">Meus Livros</a></li>
+          <li><a href="messages.html">Mensagens</a></li>
+          <li><a href="profile.html">Meu perfil</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <div class="col-xs-2">
+             <input type="text" class="form-control" placeholder="O que você procura?">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-default">Buscar</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <a href="{{ url_for('logout') }}" class="btn btn-danger navbar-btn" name="sair" role="button">Sair</a>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <ul class="nav nav-pills nav-justified">
+    <li>
+    <a href="#">
+    <i class="glyphicon glyphicon-piggy-bank"></i> Administração
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <i class="glyphicon glyphicon-camera"></i> Arte e Fotografia
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <i class="glyphicon glyphicon-plus-sign"></i> Autoajuda
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <i class="glyphicon glyphicon-flash"></i> Sci-fi
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <i class="glyphicon glyphicon-cutlery"></i> Gastronomia
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <i class="glyphicon glyphicon-header"></i> História
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <i class="glyphicon glyphicon-book"></i> HQs e Mangás
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <i class="glyphicon glyphicon-tint"></i> Medicina
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <i class="glyphicon glyphicon-eye-close"></i> Policial e Mistério
+    </a>
+    </li>
+    <li>
+    <a href="#">
+    <i class="glyphicon glyphicon-briefcase"></i> Universitários
+    </a>
+    </li>
+  </ul>
+
+  <h1>  Novidades nas suas preferências</h1>
+
+<div class="row">
+  <div class="col-sm-2">
+  <div class="card" style="width: 15rem;">
+  <img class="card-img-top" src="img/capital.jpg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">A era do capital</h4>
+    <h6>Eric Hobsbawn</h6>
+    <p class="card-text">A Era do Capital é um livro escrito pelo historiador britânico Eric Hobsbawm. Ele trata
+    de eventos históricos ocorridos na Europa entre 1848 e 1875, período que marca o início da Grande Depressão.</p>
+    <a href="#" class="btn btn-primary">#História</a>
+  </div>
+</div>
+</div>
+
+<div class="col-sm-2">
+<div class="card" style="width: 15rem;">
+<img class="card-img-top" src="img/revolucoes.jpg" alt="Card image cap">
+<div class="card-block">
+  <h4 class="card-title">A era das revoluções</h4>
+  <h6>Eric Hobsbawn</h6>
+  <p class="card-text">A Era das Revoluções é um livro escrito pelo historiador britânico Eric Hobsbawm, com o
+  principal objetivo de analisar a Revolução Francesa e a Revolução Industrial, assim como
+  o seu impacto na sociedade até aos dias de hoje.</p>
+  <a href="#" class="btn btn-primary">#História</a>
+</div>
+</div>
+</div>
+
+<div class="col-sm-2">
+<div class="card" style="width: 15rem;">
+<img class="card-img-top" src="img/extremos.jpg" alt="Card image cap">
+<div class="card-block">
+  <h4 class="card-title">A era dos extremos</h4>
+  <h6>Eric Hobsbawn</h6>
+  <p class="card-text">O livro Era dos Extremos: o breve século XX, 1914–1991 é um livro de História escrito
+  por Eric Hobsbawm em 1994 que discorre sobre o século XX, mais precisamente do início
+  da Primeira Guerra Mundial em 1914 até a queda da União...</p>
+  <a href="#" class="btn btn-primary">#História</a>
+</div>
+</div>
+</div>
+
+<div class="col-sm-2">
+<div class="card" style="width: 15rem;">
+<img class="card-img-top" src="img/imperios.jpg" alt="Card image cap">
+<div class="card-block">
+  <h4 class="card-title">A era dos impérios</h4>
+  <h6>Eric Hobsbawn</h6>
+  <p class="card-text">É um livro de autoria do historiador e cientista social inglês Eric Hobsbawm.
+  Ficou em toda historia do japao e em outros países quando aconteceu esse fato histórico.</p>
+  <a href="#" class="btn btn-primary">#História</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</body>
