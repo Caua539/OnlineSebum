@@ -6,10 +6,11 @@ function login() {
 
   auth.signInWithEmailAndPassword(email, password)
   firebase.auth().onAuthStateChanged(function(user) {
+    emailUsuario = user.email;
+    alert("Email do usuário: "+emailUsuario);
   if (user) {
     window.location.replace("http://onlinesebum.tk:8080/dashboard.html");    
   } else {
-    alert("Usuário inválido!");
   }
 });
 }
