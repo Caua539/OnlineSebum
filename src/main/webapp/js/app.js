@@ -5,9 +5,13 @@ function login() {
   const auth = firebase.auth()
 
   auth.signInWithEmailAndPassword(email, password)
-  if(email != null){
-        window.location.replace("http://localhost:8080/dashboard.html");    
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    window.location.replace("http://localhost:8080/dashboard.html");    
+  } else {
+    alert("Usuário inválido!");
   }
+});
 }
 
 function signup() {
@@ -42,5 +46,7 @@ alert("E-mail: " + email + "\nNome: " + name);
 };
 
 function sair(){
-    firebase.auth().signOut()
-}
+      alert("Saiu"); 
+    firebase.auth().signOut();
+    window.location.replace("http://localhost:8080/login.html");   
+};
