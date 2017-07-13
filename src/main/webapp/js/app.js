@@ -5,6 +5,9 @@ function login() {
   const auth = firebase.auth()
 
   auth.signInWithEmailAndPassword(email, password)
+  if(email != null){
+        window.location.replace("http://localhost:8080/dashboard.html");    
+  }
 }
 
 function signup() {
@@ -17,6 +20,8 @@ function signup() {
   firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     user.sendEmailVerification()
+    window.location.replace("http://localhost:8080/login.html");    
+
   }
 });
 }
@@ -35,3 +40,7 @@ uid = user.uid;
 }
 alert("E-mail: " + email + "\nNome: " + name);
 };
+
+function sair(){
+    firebase.auth().signOut()
+}
