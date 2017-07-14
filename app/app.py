@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import Flask, flash, redirect, render_template, request, session, abort, url_for
 import os
+import time
 from sqlalchemy.orm import sessionmaker
 from tabledef import *
 engine = create_engine('sqlite:///sebodb.db', echo=True)
@@ -29,7 +30,8 @@ def login_page():
             session['logged_in'] = True
             return redirect(url_for('dash_page'))
         else:
-            flash('wrong password!')
+            flash('Senha incorreta')
+            time.sleep(1)
         return home_page()
 
     return render_template('login_boot.html')
@@ -55,6 +57,8 @@ def register_page():
         user = User(str(request.form['name']), str(request.form['email']), str(request.form['password']))
         session.add(user)
         session.commit()
+        flash('Registrado!')
+        time.sleep(1)
 		
         return redirect(url_for('home_page'))
 		
